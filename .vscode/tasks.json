@@ -1,0 +1,44 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "build active file",
+			"command": "/usr/bin/g++",
+			"args": [
+                "-g",
+				"${file}",
+				"-o",
+			    "${fileDirname}/${fileBasenameNoExtension}",
+				"-lSDL2"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "Builds the currently open C++ file."
+		},
+		{
+			"label": "run active file",
+			"dependsOn": "build active file",
+			"presentation": {
+				"reveal": "always",
+				"focus": true,
+				"echo": true,
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"type": "shell",
+			"command": "${fileDirname}/${fileBasenameNoExtension}",
+			"args": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		}
+	]
+}
