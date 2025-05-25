@@ -1,4 +1,3 @@
-// matrix.cpp
 // Matrix falling letters effect using SDL2 in full-screen mode
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
@@ -9,6 +8,7 @@
 const int FONT_SIZE = 18;
 const int TRAIL_LENGTH = 18;
 const int SYMBOLS = 96; // printable ASCII
+// Download font from https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
 const char * const FONT_NAME = "DejaVu Sans Mono for Powerline.ttf"; // "DejaVuSansMono.ttf";
 
 // Simple font: use SDL_Rendwget https://github.com/dejavu-fonts/dejavu-fonts/raw/version_2_37/ttf/DejaVuSansMono.ttferDrawText if available, else draw rectangles as glyphs
